@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Hello World</title>
+    <style type="text/css">
+      #body {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #d5cfcf;
+      }
+      #content-holder {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .logo {
+        max-width: 100%;
+        margin-bottom: 20px;
+        animation: fade-in 1s ease-out;
+        border-radius: 10px;
+        height: 10rem;
+      }
+      h4 {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #333;
+        margin-bottom: 20px;
+        animation: slide-up 1s ease-out;
+      }
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes slide-up {
+        0% {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="body">
+      <div id="content-holder">
+        <img src="img/logo.png" alt="DigitalPhotography" class="logo" />
+        <h4>Please wait...</h4>
+        <img src="img/pleasewait.gif" alt="Please wait" width="50px" /><br />
+      </div>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
